@@ -1,0 +1,437 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --BG: linear-gradient(120deg,
+            #ff003369,
+            #ff00ff,
+            #5500ff,
+            #0088ff,
+            #00ff88,
+            #00ff005e);
+
+    --Main_BG: #0b0b0bd9;
+
+    --White: #f5f5f5;
+    --Black: #000;
+
+    --Header_BG: #080808;
+
+    --Image_Border: #00ff88;
+
+    --Card_Color: #151a22;
+    --Card_Heading: #00ff88;
+
+    --Link_BG: #080b10;
+
+    --Primary: #00ff88;
+    --Secondary: #00bfff;
+    --Purple: #b14cff;
+
+    --Text_Main: #ffffff;
+    --Text_Muted: #a8a8a8;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--BG);
+
+    background-attachment: fixed;
+
+    color: var(--Text_Main);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+header {
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--Header_BG);
+
+    border-bottom: 1px solid #ffffff0d;
+
+    box-shadow:
+        0px 5px 30px #00000080;
+
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg,
+            var(--Primary),
+            var(--Secondary),
+            var(--Purple),
+            var(--Pink));
+
+    background-size: 200% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation: Gradient_Move 5s linear infinite;
+}
+
+
+
+main {
+    width: min(1100px, 90%);
+
+    margin: 35px auto;
+
+    padding: 10px 0px 25px;
+
+    background: var(--Main_BG);
+
+    border: 1px solid #ffffff12;
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0px 20px 60px #00000090,
+        inset 0px 1px 0px #ffffff08;
+}
+
+.Img_Logo_Social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px 25px;
+}
+
+.Img_Logo_Social img {
+    width: 125px;
+    height: 125px;
+
+    object-fit: cover;
+
+    border: 3px solid var(--Primary);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0px 0px 15px #00ff8870,
+        0px 0px 45px #00ff8830;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.Img_Logo_Social img:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0px 0px 20px #00ff8890,
+        0px 0px 60px #00ff8845;
+}
+
+.Img_Logo_Social h2 {
+    margin-top: 15px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: var(--White);
+}
+
+.Social {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 14px;
+
+    font-size: 25px;
+}
+
+.Social i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--Text_Muted);
+
+    background: #ffffff05;
+
+    border: 1px solid #ffffff0d;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.Social i:hover {
+    color: var(--Primary);
+
+    background: #00ff8810;
+
+    border-color: var(--Border_Hover);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0px 5px 20px #00ff8820;
+}
+
+.Referral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0px 25px;
+}
+
+.Referral ul {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+.Referral ul li {
+    list-style: none;
+
+    width: 100%;
+    min-height: 110px;
+
+    margin: 18px 0px;
+    padding: 15px;
+
+    background:
+        linear-gradient(145deg,
+            #151a23ee,
+            #0d1118ee);
+
+    border: 1px solid var(--Border);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0px 8px 25px #00000050;
+
+    transition:
+        transform 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.Referral ul li:hover {
+    transform: translateY(-4px);
+
+    background: var(--Card_Hover);
+
+    border-color: var(--Border_Hover);
+
+    box-shadow:
+        0px 12px 35px #00000070,
+        0px 0px 25px #00ff8810;
+}
+
+.Referral ul li h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: 750;
+
+    background:
+        linear-gradient(90deg,
+            var(--Primary),
+            var(--Secondary),
+            var(--Purple));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.Link {
+    min-height: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 13px;
+
+    background: var(--Link_BG);
+
+    border: 1px solid #ffffff0d;
+
+    border-radius: 9px;
+
+    color: var(--Text_Muted);
+
+    font-family: monospace;
+    font-size: 14px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        border 0.2s ease,
+        background 0.2s ease;
+}
+
+.Link:hover {
+    background: #0b1017;
+
+    border-color: #00ff8830;
+}
+
+.Link i {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--Primary);
+
+    background: #00ff880b;
+
+    border: 1px solid #00ff8818;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.Link i:hover {
+    color: var(--Secondary);
+
+    background: #00c8ff12;
+
+    transform: scale(1.08);
+}
+
+@keyframes Gradient_Move {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        height: 65px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        width: 94%;
+
+        margin: 20px auto;
+
+        border-radius: 17px;
+    }
+
+    .Img_Logo_Social {
+        padding-top: 25px;
+    }
+
+    .Img_Logo_Social img {
+        width: 105px;
+        height: 105px;
+    }
+
+    .Img_Logo_Social h2 {
+        font-size: 21px;
+    }
+
+    .Referral {
+        padding: 0px 12px;
+    }
+
+    .Referral ul li {
+        min-height: 105px;
+
+        padding: 12px;
+
+        margin: 14px 0px;
+    }
+
+    .Referral ul li h1 {
+        font-size: 22px;
+    }
+
+    .Link {
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .Link {
+        font-size: 11px;
+    }
+
+    .Social {
+        gap: 12px;
+    }
+}
