@@ -8,7 +8,7 @@ let Grass
 let GoSats
 let BixBerry
 
-fetch("https://raw.githu busercontent.com/ferrofy/Referrals/main/Data/Links.json")
+fetch("https://raw.githubusercontent.com/ferrofy/Referrals/main/Data/Links.json")
     .catch(() => {
         return fetch("../Data/Links.json")
     })
